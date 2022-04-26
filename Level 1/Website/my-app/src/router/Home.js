@@ -53,12 +53,14 @@ function Home() {
     if (product) {
       return product.map((item, index) => {
         if (item.category == itemProduct) {
-          console.log(item);
+          // console.log(item.id);
+
           return (
-            <div className=" item-content">
+            <div className=" item-content" key={index}>
               <Link
                 to={"/product/" + item.id}
                 onClick={() => {
+                  // debugger;
                   GetDetailProduct();
                   setProdId(item.id);
                   setCheckPage(true);
@@ -82,20 +84,31 @@ function Home() {
       return product.map((item, index) => {
         return (
           <div className=" item-content" key={index}>
-            <img src={item.image} alt="" />
-            <p>{item.title}</p>
-            <p>
-              {item.price} <sup>đ</sup>
-            </p>
+            <Link
+              to={"/product/" + item.id}
+              onClick={() => {
+                // debugger;
+                GetDetailProduct();
+                setProdId(item.id);
+                setCheckPage(true);
+              }}
+            >
+              <img src={item.image} alt="" />
+              <p>{item.title}</p>
+              <p>
+                {item.price} <sup>đ</sup>
+              </p>
+            </Link>
           </div>
         );
       });
     }
   };
-  function GetDetailProduct() {
-    if (product > 0) {
+  function GetDetailProduct(prodId) {
+    if (product) {
       return product.map((item, index) => {
         if (item.id == prodId) {
+          // alert(prodId);
           return (
             <div className="deatailProduct container">
               <div className="row">
@@ -115,9 +128,7 @@ function Home() {
                     </span>
                     <span>(12000 đánh giá)</span>
                   </div>
-                  <p className="price-prod item">
-                    {item.price} <sup>đ</sup>
-                  </p>
+                  <p className="price-prod item">{item.price}$</p>
                   <div>
                     <button className=" btn btn-buy ">Mua ngay</button>
                     <button className=" btn btn-cart">
