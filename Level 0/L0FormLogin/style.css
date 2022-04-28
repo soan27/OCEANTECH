@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: gray;
+}
+
+.form__login{
+    background-color: #fff;
+}
+
+.form__login{
+    height: 365px;
+    width: 350px;
+    color: black;
+    text-align: center;
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    border-radius: 10px;
+    border: 1px solid rgb(155, 153, 153);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2{
+    margin-top: 45px;
+    margin-bottom: 40px;
+}
+
+.form__input {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.form__input input {
+    width: 285px;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+.form__submit input{
+    background-color: #00CE81;
+    margin-bottom: 25px;
+}
+.icon {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    margin-left: 17px ;
+    margin-top: -13px ;
+}
+
+.forgot__password{
+    background-color: #ECF0F1;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+::placeholder{
+    padding-left: 40px;
+    color: rgb(86, 84, 84);
+}

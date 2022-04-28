@@ -1,0 +1,61 @@
+1. Selector combinators (tổ hợp)
+- descendant selector(space): vd tag01 tag02: chọn tất cả các thành phần tag02 bên trong tag01 (quan hệ trong ngoài).
+-child selector(>) vd tag01 > tag02: Chọn tất cả các thành phần <tag02> có thành phần cha là tag01.
+- adjacent sibling selector(+): div + p : div và p phải cùng mức với nhau, và lựa chọn 1 thẻ p(ngang mức với div) ngay sau thẻ div
+- General Sibling Selector (~): div ~ p: div và p phải cùng mức với nhau và lựa chọn tất cả các thẻ p(ngang mức với div) đằng sau thẻ div.
+2.Pdeudo-class
+2.1 Anchor Pseudo-classes:
+- a:link :  dùng để chọn các liên kết mà đường dẫn của nó chưa được trình duyệt ghé thăm.
+- a:visited: dùng để chọn các liên kết mà đường dẫn của nó đã được trình duyệt ghé thăm.
+- a:hover: dùng để chọn phần tử đang được hover chuột vào.
+- a:active: dùng để chọn phần tử đang được click vào
+2.2
+-div:hover : khi hover qua thẻ div thì thuộc tính trong đó đc áp dụng
+-p:first-child: phần tử đầu tiên của thẻ p 
+-p:nth-child(n) : phần từ thứ n của thẻ p từ trên xuống
+-p:last-child: phần tử cuối cùng
+-p:nth-last-child(n):phần tử thử n của thẻ p từ dưới lên 
+3. Pseudo-element
+-h1::before : được sử dụng để thêm text, hình ảnh hay bất kỳ nội dung gì phía trước nội dung của phần tử được chọn.
+-h1::after: được sử dụng để thêm text, hình ảnh hay bất kỳ nội dung gì phía sau nội dung của phần tử được chọn.
+-::section: Pseudo-element này được dùng để style cho một vùng văn bản được bôi đen. Chỉ có một số thuộc tính css khả dụng với ::selection là color, background, curso, và outline.
+-::first-line : chọn cả dòng đầu tiên để style 1 số thuộc tính nào đó.
+-::first-letter: chọn ký tự đầu tiên để style cho 1 số thuộc tính nào đó
+4. Box model
+-margin: là khoảng cách từ border đến phần tử khác
+	margin: 50px ; áp dụng cả 4 cạnh
+	margin: 25px 75 px: áp dụng TOP và BOTTOM là 25px và left right 75px
+	margin: 25px 60px 75px : áp dụng TOP 25px, left right 60px, bottom 75px
+	margin: 25px 25px 25px 25px: tất cả 4 mặt là 25px
+- border: là đường viền nằm giữa margin và padding
+	border: 1px solid #fff; đường viền có đường 1px kiểu đường thẳng nét có màu trắng.
+	Cách hiển thị các đường viền: none, hidden, dotted(dấu chấm), dashed(đường -), double... 	
+-padding: nằm giữa border và content
+	padding: 50px ; áp dụng cả 4 cạnh
+	padding: 25px 75 px: áp dụng TOP và BOTTOM là 25px và left right 75px
+	padding: 25px 60px 75px : áp dụng TOP 25px, left right 60px, bottom 75px
+	padding: 25px 25px 25px 25px: tất cả 4 mặt là 25px
+- content: nội dung trong hộp, nơi hiển thị văn bản và hình ảnh
+5 Box sizing
+- box-sizing là một thuộc tính có thể tính toán và làm chủ được kích thước của một phần tử dựa vào thuộc tính width và height đã được thiết lập bên trong. 
+		Hay nói cách khác, thuộc tính width và height là kích thước đã bao gồm border và padding.
+
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+*box-sizing gồm:
+- content-box: Giá trị mặc định, nghĩa là giá trị width và height chỉ áp dụng cho khu vực nội dung bên trong, không bao gồm padding, border và margin.
+- border-box: Khi thiết lập giá trị này, thì width và heigh sẽ bao gồm cho cả phần nội dung, padding và border nhưng không bao gồm margin.
+- padding-box: Với giá trị này thì width và height chỉ bao gồm cho phần nội dung và padding, không bao gồm border và margin.
+
+
+
+
+
+
+
+
+
+
+
+

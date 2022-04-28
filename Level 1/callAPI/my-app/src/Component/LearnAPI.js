@@ -52,12 +52,12 @@ function LearnAPI() {
                         // setidEdit(item.id);
                       }}
                     >
-                      <i class="fas fa-edit"></i>
+                      <i className="fas fa-edit"></i>
                     </button>
                   </td>
                   <td>
                     <button onClick={() => deleteUser(item.id)}>
-                      <i class="fas fa-trash"></i>
+                      <i className="fas fa-trash"></i>
                     </button>
                   </td>
                 </tr>

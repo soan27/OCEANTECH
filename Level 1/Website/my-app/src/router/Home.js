@@ -120,11 +120,11 @@ function Home() {
                   <div className="star item">
                     <span>
                       4.0
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="far fa-star"></i>
+                      <i className="fas fa-star"></i>
+                      <i className="fas fa-star"></i>
+                      <i className="fas fa-star"></i>
+                      <i className="fas fa-star"></i>
+                      <i className="far fa-star"></i>
                     </span>
                     <span>(12000 đánh giá)</span>
                   </div>
@@ -133,7 +133,7 @@ function Home() {
                     <button className=" btn btn-buy ">Mua ngay</button>
                     <button className=" btn btn-cart">
                       {" "}
-                      <i class="fas fa-cart-arrow-down"></i> Giỏ hàng
+                      <i className="fas fa-cart-arrow-down"></i> Giỏ hàng
                     </button>
                   </div>
                 </div>
